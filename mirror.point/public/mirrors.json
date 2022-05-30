@@ -1,0 +1,58 @@
+[
+  {
+    "id": "uniswap/tokens.json",
+    "src": "https://tokens.uniswap.org/",
+    "validation": [ "json" ],
+    "frequency": "1m"
+  },
+
+  {
+    "id": "compound-finance/compound.tokenlist.json",
+    "src": "https://raw.githubusercontent.com/compound-finance/token-list/master/compound.tokenlist.json",
+    "validation": [ "json" ],
+    "frequency": "1m"
+  },
+
+  {
+    "id": "coinmarketcap/data-api-v3-uniswap-all.json",
+    "src": "https://api.coinmarketcap.com/data-api/v3/uniswap/all.json",
+    "validation": [ "json" ],
+    "frequency": "1m"
+  },
+
+  {
+    "id": "coingecko/uniswap-all.json",
+    "src": "https://tokens.coingecko.com/uniswap/all.json",
+    "validation": [ "json" ],
+    "frequency": "1m"
+  },
+
+  {
+    "id": "SetProtocol/uniswap-set.tokenlist.json",
+    "src": "https://raw.githubusercontent.com/SetProtocol/uniswap-tokenlist/main/set.tokenlist.json",
+    "validation": [ "json" ],
+    "frequency": "1m"
+  },
+
+  {
+    "id": "tryroll/tokens.json",
+    "src": "https://app.tryroll.com/tokens.json",
+    "validation": [ "json" ],
+    "frequency": "1m"
+  },
+
+  {
+    "id": "arbitrum/token-list-42161.json",
+    "src": "https://bridge.arbitrum.io/token-list-42161.json",
+    "validation": [ "json" ],
+    "frequency": "1m"
+  },
+
+  {
+    "id": "optimism/optimism.tokenlist.json",
+    "src": "https://static.optimism.io/optimism.tokenlist.json",
+    "validation": [ "json" ],
+    "frequency": "1m"
+  }
+
+]

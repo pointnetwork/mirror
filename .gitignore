@@ -1,0 +1,4 @@
+node_modules/
+logs/
+mirror.point/public/data
+.idea/

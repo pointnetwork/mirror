@@ -1,0 +1,10 @@
+{
+  "version": 0.1,
+  "target": "mirror.point",
+  "keyvalue": {},
+  "rootDir": "public",
+  "upload": {
+    "redundancy": 10,
+    "timeperiod": 10000
+  }
+}

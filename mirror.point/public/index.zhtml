@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+<h1>Mirrors</h1>
+
+<hr>
+
+<div class="mirrors">
+
+</div>
+
+<script>
+    function wrap_url(url, url_suffix = '') {
+        return '<a href="' + url + url_suffix + '" target="_blank">' + url + '</a>';
+    }
+    $.get('./mirrors.json', function(mirrors) {
+        for(var mirror_i in mirrors) {
+            var mirror = mirrors[mirror_i];
+
+            mirror['dest'] = 'https://mirror.point/data/' + mirror.id;
+
+            var html = "<div class='mirror'>";
+            for(var key in mirror) {
+                var val = mirror[key];
+
+                if (key === 'src' || key === 'dest') {
+                    var url_suffix = (key === 'src') ? '?mirror=false' : '';
+                    val = '<a href="' + val + url_suffix + '" target="_blank">' + val + '</a>'
+                }
+
+                html += "<strong>" + key + "</strong>: " + val + "<br>";
+            }
+            html += "</div>";
+
+            html2 = "<div class='mirror'>";
+            html2 += wrap_url(mirror.src, '?mirror=false') + ' &rarr; ' + wrap_url(mirror.dest) + ' <span class="muted">('+'freq:'+mirror.frequency+')'+'</span>';
+            html2 += "</div>";
+
+            $('.mirrors').append(html2);
+        }
+    });
+</script>
+
+<style>
+    .mirrors {
+        background-color: #fefefe;
+    }
+    .mirror {
+        background-color: #eeeeee;
+        padding: 10px;
+        margin: 10px 0;
+    }
+    .muted {
+        color: #888;
+    }
+</style>
+
+</body>
+</html>
+
